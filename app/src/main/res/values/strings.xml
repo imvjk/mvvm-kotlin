@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="menu_filter">Filter</string>
+    <string name="release_date">Release date</string>
+    <string name="popular">Popular</string>
+    <string name="review_star">review star</string>
+    <string name="image">image</string>
+</resources>

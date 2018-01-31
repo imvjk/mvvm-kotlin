@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View.OnClickListener" />
+
+        <import type="example.com.mvvmmoviedb.R" />
+
+        <variable
+            name="movie"
+            type="example.com.mvvmmoviedb.data.model.Movie" />
+
+        <variable
+            name="listener"
+            type="example.com.mvvmmoviedb.movies.MoviesAdapter.Listener" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/movie_thumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image"
+            android:src="@{movie.smallThumbUrl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeHolder="@{R.drawable.progress_animation}" />
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:ellipsize="marquee"
+            android:text="@{movie.title}"
+            android:textColor="@color/light_color"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/movie_thumb"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintTop_toBottomOf="@id/movie_title" />
+
+        <ImageView
+            android:id="@+id/movie_star_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/review_star"
+            app:layout_constraintStart_toEndOf="@+id/movie_thumb"
+            app:layout_constraintTop_toBottomOf="@+id/guideline"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <TextView
+            android:id="@+id/movie_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:text="@{movie.movieStar}"
+            android:textColor="@color/light_color"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/movie_star_icon"
+            app:layout_constraintTop_toBottomOf="@+id/guideline" />
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
