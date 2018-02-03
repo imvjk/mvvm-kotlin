@@ -106,9 +106,4 @@ class MoviesFragment : Fragment() {
             Log.w(TAG, "ViewModel not initialized when attempting to set up adapter.")
         }
     }
-
-    enum class Filter {
-        RELEASE,
-        POPULAR
-    }
 }

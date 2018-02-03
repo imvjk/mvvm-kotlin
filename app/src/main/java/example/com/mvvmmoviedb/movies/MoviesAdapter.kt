@@ -49,8 +49,4 @@ class MoviesAdapter(
             }
         }
     }
-
-    interface Listener {
-        fun onItemClicked(movie: Movie)
-    }
 }
