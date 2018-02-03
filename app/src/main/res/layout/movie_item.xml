@@ -13,9 +13,6 @@
             name="movie"
             type="example.com.mvvmmoviedb.data.model.Movie" />
 
-        <variable
-            name="listener"
-            type="example.com.mvvmmoviedb.movies.MoviesAdapter.Listener" />
     </data>
 
     <android.support.constraint.ConstraintLayout
